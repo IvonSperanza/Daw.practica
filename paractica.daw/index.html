@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIN DEL CEPO</title>
+</head>
+<body>
+    
+    <h1>Fin del cepo cambiario: cuántos dólares se podrán comprar libremente y a partir de cuándo</h1>
+  
+    <p>El Gobierno informó el acuerdo con el FMI y, con ello, el fin de las restricciones para el acceso a divisas; además, qué pasará con las importaciones</p>
+    <section style="display: flex; align-items: flex-start; gap: 20px;">
+        <div style="text-align: center;">
+    
+    <!-- ✅ UN SOLO SECTION FLEX CON AMBOS BLOQUES -->
+    <section style="display: flex; align-items: flex-start; gap: 20px;">
+        <!-- 📸 Imagen + pie -->
+        <div style="text-align: center;">
+            <img src="el-ministro-caputo-anuncio-el-fin-del-cepo-al-RZOLWOX3EVGVLPQHK64N7MXDPA (1).avif" width="500">
+            <p style="font-size: 14px;">El ministro Caputo anunció el fin del cepo al dólar</p>
+        </div>
+
+        <!-- 📝 Texto a la derecha -->
+        <div style="max-width: 700px; text-align: left;">
+            <p style="font-size: 20px;">
+                En un movimiento que marcará un antes y un después en el mercado, el Banco Central de la República Argentina (BCRA) anunció que levantará el cepo al dólar y pondrá en marcha un nuevo esquema de bandas cambiarias. La medida, largamente esperada por distintos sectores económicos, busca darle mayor previsibilidad al tipo de cambio.
+            </p>
+            <p style="font-size: 20px;">
+                Según explicó el ministro de Economía, Luis Caputo, el levantamiento del cepo es parte de un nuevo entendimiento con el Fondo Monetario Internacional.
+            </p>
+            <p style="font-size: 20px;">
+                “Hemos llegado a un nuevo acuerdo con el FMI”, afirmó. Además, precisó: “El nuevo acuerdo implica que vamos a concluir con la etapa 3 de nuestro programa económico”.
+            </p>
+            <p style="font-size: 20px;">
+                Al respecto de eso, recordó que el plan se estructuró en tres fases: “Planteamos el programa en tres etapas: terminar con el déficit fiscal, el déficit cuasi fiscal y la emisión monetaria, y la tercera, la recapitalización del Banco Central”.
+            </p>
+        </div>
+    </section>
+    <section>
+        <h3 style="font-size: 30px;">
+            ¿Cómo se podrá comprar dólares a partir del lunes?, el día que termina el cepo.
+
+        </h3>
+        <ul style="font-size: 20px; text-align: left;">
+            <li>
+                <strong>El límite de US$200 de acceso al Mercado Libre de Cambios se elimina.</strong>
+                
+                Lo mismo ocurre con todas las restricciones de acceso vinculadas con asistencias gubernamentales recibidas durante la pandemia, subsidios, el empleo público y otros, aclaró el Banco Central.
+            </li> <br>
+            <li>Adicionalmente, la Agencia de Recaudación y Control Aduanero (ARCA)
+                <strong> eliminará la percepción impositiva existente a la adquisición de moneda extranjera en el mercado,</strong>
+                
+                aunque permanece para el turismo y los pagos de tarjetas de crédito en el exterior.
+            </li>
+        </ul>
+        <p style="font-size: 20px;"></p>
+    </section>
+    <h4 style="width: 30px; font-family: 'Times New Roman', Times, serif;">
+       <strong>LA NACION</strong> 
+    </h4>
+    <h2>Simulador de Compra de Dólares</h2>
+    <form>
+      <label for="pesos">Ingresá la cantidad de pesos:</label><br>
+      <input type="number" id="pesos" name="pesos" required><br><br>
+    
+      <label for="tipoCambio">Tipo de cambio (estimado):</label><br>
+      <input type="number" id="tipoCambio" name="tipoCambio" value="950"><br><br>
+    
+      <button type="button" onclick="calcularDolares()">Calcular</button>
+    </form>
+    
+    <p id="resultado" style="font-weight: bold;"></p>
+    
+    <script>
+    function calcularDolares() {
+      const pesos = document.getElementById("pesos").value;
+      const tipoCambio = document.getElementById("tipoCambio").value;
+      const resultado = pesos / tipoCambio;
+      document.getElementById("resultado").innerText = 
+        "Podés comprar aproximadamente: " + resultado.toFixed(2) + " USD";
+    }
+    </script>
+    
+
+</body>
+</html>
