@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+    <header class="header-top">
+        <div class="header-main">
+            
+            <div class="header-logo-center">
+                <img src="descarga (1).png" alt="LA NACION">
+            </div>
+           
+        </div>
+        <nav class="header-menu">
+            <a href="#">Últimas Noticias</a>
+            <a href="#">Política</a>
+            <a href="#">Economía</a>
+            <a href="#">Dólar hoy</a>
+            <a href="#">Deportes</a>
+            <a href="#">Sociedad</a>
+            <a href="#">Policiales</a>
+        </nav>
+    </header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Fin del Cepo</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="top-banner">
+    <div class="container">
+      <div class="left">
+        <div class="brand">LA NACION</div>
+        <div class="date">3 May, 2025</div>
+      </div>
+      <nav class="nav-links">
+        <a href="#">Argentina</a>
+        <a href="#">Buenos Aires</a>
+        <a href="#">Rosario</a>
+      </nav>
+      <div class="auth-buttons">
+        <button class="btn register">REGISTRARME</button>
+        <button class="btn login">INICIAR SESIÓN</button>
+      </div>
+    </div>
+</header>
+
+<div class="recomendados-fijos">
+    <h3>Te Recomendamos</h3>
+    <ul>
+      <li>
+        <span class="numero">1</span>
+        <a href="#">Ravenclaw: la mejor casa de Hogwarts, no hay discusión </a>
+        <img src="images.jpeg" alt="Andor">
+      </li>
+      <li>
+        <span class="numero">2</span>
+        <a href="#">Luna Lovegood: el  mejor personaje  de HP, no hay discusión</a>
+        <img src="images (1).jpeg" alt="Melissa">
+      </li>
+      <li>
+        <span class="numero">3</span>
+        <a href="#">Se aprobará daw?</a>
+        <img src="descarga.png" alt="Angelina Jolie">
+      </li>
+    </ul>
+</div>
+
+<h1>Fin del cepo cambiario: cuántos dólares se podrán comprar libremente y a partir de cuándo</h1>
+<p class="intro">
+    El Gobierno informó el acuerdo con el FMI y, con ello, el fin de las restricciones para el acceso a divisas; además, qué pasará con las importaciones.
+</p>
+
+<section class="contenedor-flex">
+    <div class="imagen">
+        <img src="luis-caputo-conferencia-acuerdo-fmi.webp" alt="Caputo anuncia el fin del cepo">
+        <p class="pie-foto">El ministro Caputo anunció el fin del cepo al dólar</p>
+    </div>
+    <div class="texto">
+        <p>En un movimiento que marcará un antes y un después en el mercado, el Banco Central de la República Argentina (BCRA) anunció que levantará el cepo al dólar y pondrá en marcha un nuevo esquema de bandas cambiarias.</p>
+        <p>Según explicó el ministro de Economía, Luis Caputo, el levantamiento del cepo es parte de un nuevo entendimiento con el Fondo Monetario Internacional.</p>
+        <p>“Hemos llegado a un nuevo acuerdo con el FMI”, afirmó.</p>
+    </div>
+</section>
+
+<section>
+    <h2>¿Cómo se podrá comprar dólares a partir del lunes?</h2>
+    <ul>
+        <li><strong>Se elimina el límite de US$200 del Mercado Libre de Cambios.</strong></li>
+        <li><strong>La ARCA eliminará la percepción impositiva en la compra de dólares para ahorro.</strong></li>
+    </ul>
+</section>
+
+<p class="credito">LA NACION</p>
+
+<div class="seguir-leyendo">
+    <div class="titulo-seguir">
+        👁️‍🗨️ <strong>Seguir leyendo</strong>
+    </div>
+    <ul class="lista-articulos">
+        <li><a href="#">Ricardo Darín y El Eternauta: “una locura” que arrasa en Netflix</a></li>
+        <li><a href="#">Aprobame Plis</a></li>
+        <li><a href="#">Dale tengo que aprobar</a></li>
+    </ul>
+</div>
+
+<section class="simulador">
+    <h2>Simulador de Compra de Dólares</h2>
+    <form>
+        <label for="pesos">Ingresá la cantidad de pesos:</label>
+        <input type="number" id="pesos" name="pesos" required>
+
+        <label for="tipoCambio">Tipo de cambio (estimado):</label>
+        <input type="number" id="tipoCambio" name="tipoCambio" value="950">
+
+        <button type="button" onclick="calcularDolares()">Calcular</button>
+    </form>
+    <p id="resultado"></p>
+</section>
+
+<script>
+function calcularDolares() {
+    const pesos = document.getElementById("pesos").value;
+    const tipoCambio = document.getElementById("tipoCambio").value;
+    const resultado = pesos / tipoCambio;
+    document.getElementById("resultado").innerText =
+        "Podés comprar aproximadamente: " + resultado.toFixed(2) + " USD";
+}
+</script>
+
+</body>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>La Nación</h3>
+            <p>Seguinos:</p>
+            <div class="social-icons">
+                <a href="#"><img src="assor.png" alt="Facebook"></a>
+               
+            </div>
+        </div>
+        <div class="footer-column">
+            <h4>Secciones</h4>
+            <ul>
+                <li><a href="#">América</a></li>
+               
+                <li><a href="#">España</a></li>
+         
+                <li><a href="#">Últimas Noticias</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Contáctenos</h4>
+            <ul>
+                
+                <li><a href="#">Contacto comercial</a></li>
+                <li><a href="#">Media Kit</a></li>
+                <li><a href="#">Laburos</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Legales</h4>
+            <ul>
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <hr>
+        <p>Todos Los Derechos Reservados © 2025 IVON</p>
+    </div>
+</footer>
+</html>
