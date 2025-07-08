@@ -1,0 +1,177 @@
+<!-- subscription.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suscripción - SUCRIPCION</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #34495e;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .subscription-container {
+      max-width: 1000px;
+      margin: 30px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    #titulo-dinamico {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .subscription-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .form-group {
+      flex: 1 1 45%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .full-width {
+      flex: 1 1 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    input {
+      padding: 10px;
+      margin-bottom: 5px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.85rem;
+      height: 1rem;
+      margin-bottom: 10px;
+    }
+
+    #modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    #modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    #modal.mostrar {
+      display: flex;
+    }
+
+    @media screen and (max-width: 768px) {
+      .form-group {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Diario Online</h1>
+  </header>
+
+  <main class="subscription-container">
+    <h2 id="titulo-dinamico">HOLA</h2>
+    <form id="formulario" class="subscription-form">
+      <div class="form-group">
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo">
+        <span class="error" id="error-nombre"></span>
+
+        <input type="email" id="email" name="email" placeholder="Email">
+        <span class="error" id="error-email"></span>
+
+        <input type="password" id="password" name="password" placeholder="Contraseña">
+        <span class="error" id="error-password"></span>
+
+        <input type="password" id="repetir" name="repetir" placeholder="Repetir contraseña">
+        <span class="error" id="error-repetir"></span>
+
+        <input type="number" id="edad" name="edad" placeholder="Edad">
+        <span class="error" id="error-edad"></span>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="telefono" name="telefono" placeholder="Teléfono">
+        <span class="error" id="error-telefono"></span>
+
+        <input type="text" id="direccion" name="direccion" placeholder="Dirección">
+        <span class="error" id="error-direccion"></span>
+
+        <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad">
+        <span class="error" id="error-ciudad"></span>
+
+        <input type="text" id="postal" name="postal" placeholder="Código postal">
+        <span class="error" id="error-postal"></span>
+
+        <input type="text" id="dni" name="dni" placeholder="DNI">
+        <span class="error" id="error-dni"></span>
+      </div>
+
+      <div class="full-width">
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Diario Online</p>
+  </footer>
+
+  <div id="modal" class="hidden">
+    <div id="modal-content"></div>
+    <button onclick="cerrarModal()">Cerrar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
