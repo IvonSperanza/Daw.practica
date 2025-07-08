@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Newsletter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="subscription-container">
+    <h1 id="form-title">Registro </h1>
+    <form id="subscription-form">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Nombre completo" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <input type="password" name="confirmPassword" placeholder="Confirmar contraseña" required>
+        <input type="number" name="age" placeholder="Edad" required>
+        <input type="text" name="telephone" placeholder="Teléfono" required>
+        <input type="text" name="address" placeholder="Dirección" required>
+        <input type="text" name="city" placeholder="Ciudad" required>
+        <input type="text" name="postalcode" placeholder="Código postal" required>
+        <input type="text" name="dni" placeholder="DNI" required>
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="modal" class="hidden">
+ <div id="modal" class="hidden">
+  <div class="modal-content" id="modal-content">
+    <!-- contenido dinámico -->
+    <button onclick="cerrarModal()">Cerrar</button>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
